@@ -45,9 +45,32 @@ public class Main {
         }
         while(!isValidInput);
 
-        System.out.println();
+
+        //multidimentional array
+        int rows = 8;
+        int cols = 8;
+
+        float[][] board = new float[rows][cols];
+
+        for (int x=0; x < rows; x++)
+        {
+            for (int y=0; y< cols; y++)
+            {
+                board[x][y] = (float)(Math.random()*100.0) + 1.0f;
+            }
+        }
+        for(int i=0; i<10;i++)
+        {
+            var randomRows = (int) (Math.random() * rows);
+            var randomCols = (int) (Math.random() * cols);
+            System.out.print("For row: " + randomRows + " col: " + randomCols + " ");
+            System.out.printf("The random number is: %.2f\n", board[randomRows][randomCols]);
+        }
+
+
 
         //output
+        System.out.println();
         System.out.printf("You Entered: %s\n",name);
         System.out.printf("You Entered: %.2f\n",age);
 
